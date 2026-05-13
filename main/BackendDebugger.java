@@ -192,8 +192,14 @@ public class BackendDebugger {
     }
 
     // ── TEST 6: Stock In ──────────────────────────────────────────────
+    // ── TEST 6: Stock In ──────────────────────────────────────────────
     private static void testStockIn() {
         section("TEST 6: Stock In");
+
+        // FIX: Log the admin back in so the StockController has a valid user_id to send to MySQL!
+        AuthController auth = new AuthController();
+        auth.login("admin", "admin123");
+
         StockController sc = new StockController();
 
         List<Product> products = new ProductController().getAllProducts();
