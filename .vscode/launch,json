@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Run Backend Debugger",
+            "request": "launch",
+            "mainClass": "main.BackendDebugger",
+            "projectName": "OOP",
+            "classPaths": ["bin", "lib/mysql-connector-j-9.7.0.jar"]
+        },
+        {
+            "type": "java",
+            "name": "Run Coffee Shop UI",
+            "request": "launch", 
+            "mainClass": "yourpackage.YourUIMainClass",
+            "projectName": "OOP",
+            "classPaths": ["bin", "lib/mysql-connector-j-9.7.0.jar"]
+        }
+    ]
+}

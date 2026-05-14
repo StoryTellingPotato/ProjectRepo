@@ -1,0 +1,17 @@
+{
+    "java.project.sourcePaths": [
+        ".",
+        "controller",
+        "dao", 
+        "model",
+        "util",
+        "main",
+        "authenticator"
+    ],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\xampp\\htdocs\\OOP\\lib\\mysql-connector-j-9.7.0.jar"
+    ],
+    "java.debug.settings.onBuildFailureProceed": true
+}
