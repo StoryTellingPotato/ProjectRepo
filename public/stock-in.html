@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tribots | Stock In</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="brand">
+                <i class="fa-solid fa-mug-hot brand-icon"></i>
+                <span class="brand-name" style="font-family: 'Playfair Display', serif; font-style: italic;">Tribots</span>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-item">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="storage.html" class="nav-item">
+                    <i class="fa-solid fa-box-open"></i>
+                    <span>Storage</span>
+                </a>
+                <a href="stock-in.html" class="nav-item active">
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                    <span>Stock In</span>
+                </a>
+                <a href="stock-out.html" class="nav-item">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    <span>Stock Out</span>
+                </a>
+                <a href="incoming.html" class="nav-item">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <span>Incoming</span>
+                </a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="#" class="nav-item">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Settings</span>
+                </a>
+                <a href="#" class="nav-item logout">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-header">
+                <div class="search-bar">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" placeholder="Search..." id="searchInput">
+                </div>
+                
+                <div class="user-profile">
+                    <div class="notification">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="badge">2</span>
+                    </div>
+                    <div class="avatar">
+                        <img src="https://ui-avatars.com/api/?name=Admin+User&background=4a2c11&color=fff" alt="User Avatar">
+                    </div>
+                    <div class="user-info">
+                        <span class="user-name">Admin User</span>
+                        <span class="user-role">Manager</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="content-wrapper">
+                <div class="page-header">
+                    <div>
+                        <h1 class="page-title">Stock In</h1>
+                        <p class="page-subtitle">Add incoming ingredients to your storage</p>
+                    </div>
+                </div>
+
+                <div class="table-container" style="max-width: 600px;">
+                    <form id="stockInForm">
+                        <div class="form-group">
+                            <label for="stockInIngredient">Select Ingredient</label>
+                            <select id="stockInIngredient" required>
+                                <option value="">-- Select Ingredient --</option>
+                                <!-- Options populated by app.js -->
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="stockInQty">Quantity to Add</label>
+                            <input type="number" id="stockInQty" required min="1" placeholder="Enter amount">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="stockInRemarks">Remarks (Optional)</label>
+                            <input type="text" id="stockInRemarks" placeholder="e.g. Delivery from Local Bean Co.">
+                        </div>
+
+                        <div style="margin-top: 2rem;">
+                            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                                <i class="fa-solid fa-plus"></i> Confirm Stock In
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
